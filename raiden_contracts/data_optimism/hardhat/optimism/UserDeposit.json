@@ -1,0 +1,578 @@
+{
+  "address": "0xc3Fbcb0aADdFE6399e04fCADa42F92C9104Cb133",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_token_address",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_whole_balance_limit",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "newBalance",
+          "type": "uint256"
+        }
+      ],
+      "name": "BalanceReduced",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "withdrawer",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "plannedBalance",
+          "type": "uint256"
+        }
+      ],
+      "name": "WithdrawPlanned",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "balances",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "contract_address",
+          "type": "address"
+        }
+      ],
+      "name": "contractExists",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "beneficiary",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "new_total_deposit",
+          "type": "uint256"
+        }
+      ],
+      "name": "deposit",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        }
+      ],
+      "name": "effectiveBalance",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "remaining_balance",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_msc_address",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_one_to_n_address",
+          "type": "address"
+        }
+      ],
+      "name": "init",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "msc_address",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "one_to_n_address",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "planWithdraw",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "token",
+      "outputs": [
+        {
+          "internalType": "contract Token",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "total_deposit",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "sender",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "receiver",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "transfer",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "success",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "whole_balance",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "whole_balance_limit",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "withdraw",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "withdraw_delay",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "withdraw_plans",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "withdraw_block",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0xc4198cc8de405aa6b8d8397d1f54377a9ddbea47cfe8142b4f9c5dc3794cd926",
+  "receipt": {
+    "to": null,
+    "from": "0xFb8C3ba8A46014400487f2fB4d539A5Ff7bC367D",
+    "contractAddress": "0xc3Fbcb0aADdFE6399e04fCADa42F92C9104Cb133",
+    "transactionIndex": 0,
+    "gasUsed": "2629846",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000040000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000008000000400000000010000000000000000000000400000000000000000000000000008000000200000000000000000010000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000040000000000000000000",
+    "blockHash": "0x5f7f72a9c583d9f3c8a5d3199987fb2c91aa9984b1054967e993ebfbc87a657c",
+    "transactionHash": "0xc4198cc8de405aa6b8d8397d1f54377a9ddbea47cfe8142b4f9c5dc3794cd926",
+    "logs": [
+      {
+        "transactionIndex": 0,
+        "blockNumber": 115434,
+        "transactionHash": "0xc4198cc8de405aa6b8d8397d1f54377a9ddbea47cfe8142b4f9c5dc3794cd926",
+        "address": "0x4200000000000000000000000000000000000006",
+        "topics": [
+          "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef",
+          "0x000000000000000000000000fb8c3ba8a46014400487f2fb4d539a5ff7bc367d",
+          "0x0000000000000000000000004200000000000000000000000000000000000005"
+        ],
+        "data": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "logIndex": 0,
+        "blockHash": "0x5f7f72a9c583d9f3c8a5d3199987fb2c91aa9984b1054967e993ebfbc87a657c"
+      }
+    ],
+    "blockNumber": 115434,
+    "cumulativeGasUsed": "2629846",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [
+    "0x806E55Dc852609176F187a5C515393C923179d0C",
+    "115792089237316195423570985008687907853269984665640564039457584007913129639935"
+  ],
+  "solcInputHash": "d801cd5192b29c16d8f34c547e4f6dd2",
+  "metadata": "{\"compiler\":{\"version\":\"0.7.6+ovm+commit.aff196a1\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_token_address\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_whole_balance_limit\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"newBalance\",\"type\":\"uint256\"}],\"name\":\"BalanceReduced\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"withdrawer\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"plannedBalance\",\"type\":\"uint256\"}],\"name\":\"WithdrawPlanned\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"balances\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"contract_address\",\"type\":\"address\"}],\"name\":\"contractExists\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"beneficiary\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"new_total_deposit\",\"type\":\"uint256\"}],\"name\":\"deposit\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"}],\"name\":\"effectiveBalance\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"remaining_balance\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_msc_address\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_one_to_n_address\",\"type\":\"address\"}],\"name\":\"init\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"msc_address\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"one_to_n_address\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"planWithdraw\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"token\",\"outputs\":[{\"internalType\":\"contract Token\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"total_deposit\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"sender\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"receiver\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"transfer\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"success\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"whole_balance\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"whole_balance_limit\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"withdraw\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"withdraw_delay\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"withdraw_plans\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"withdraw_block\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"constructor\":{\"params\":{\"_token_address\":\"The address of the token to use for rewards\"}},\"contractExists(address)\":{\"params\":{\"contract_address\":\"The address to check whether a contract is deployed or not\"},\"returns\":{\"_0\":\"True if a contract exists, false otherwise\"}},\"deposit(address,uint256)\":{\"params\":{\"beneficiary\":\"The account benefiting from the deposit\",\"new_total_deposit\":\"The total sum of tokens that have been deposited by the user by calling this function.\"}},\"effectiveBalance(address)\":{\"params\":{\"owner\":\"Address for which the balance should be returned\"},\"returns\":{\"remaining_balance\":\"The remaining balance after planned withdrawals\"}},\"init(address,address)\":{\"params\":{\"_msc_address\":\"Address of the MonitoringService contract\",\"_one_to_n_address\":\"Address of the OneToN contract\"}},\"planWithdraw(uint256)\":{\"params\":{\"amount\":\"Maximum amount of tokens to be withdrawn\"}},\"transfer(address,address,uint256)\":{\"params\":{\"amount\":\"Amount of tokens to be transferred\",\"receiver\":\"Account to which the amount will be credited\",\"sender\":\"Account from which the amount will be deducted\"},\"returns\":{\"success\":\"true if transfer has been done successfully, otherwise false\"}},\"withdraw(uint256)\":{\"params\":{\"amount\":\"Amount of tokens to be withdrawn\"}}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"constructor\":{\"notice\":\"Set the default values for the smart contract\"},\"contractExists(address)\":{\"notice\":\"Check if a contract exists\"},\"deposit(address,uint256)\":{\"notice\":\"Deposit tokens. The amount of transferred tokens will be `new_total_deposit - total_deposit[beneficiary]`. This makes the function behavior predictable and idempotent. Can be called several times and on behalf of other accounts.\"},\"effectiveBalance(address)\":{\"notice\":\"The owner's balance with planned withdrawals deducted\"},\"init(address,address)\":{\"notice\":\"Specify trusted contracts. This has to be done outside of the constructor to avoid cyclic dependencies.\"},\"planWithdraw(uint256)\":{\"notice\":\"Announce intention to withdraw tokens. Sets the planned withdraw amount and resets the withdraw_block. There is only one planned withdrawal at a time, the old one gets overwritten.\"},\"transfer(address,address,uint256)\":{\"notice\":\"Internally transfer deposits between two addresses. Sender and receiver must be different or the transaction will fail.\"},\"withdraw(uint256)\":{\"notice\":\"Execute a planned withdrawal Will only work after the withdraw_delay has expired. An amount lower or equal to the planned amount may be withdrawn. Removes the withdraw plan even if not the full amount has been withdrawn.\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"data/source/services/UserDeposit.sol\":\"UserDeposit\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":1},\"remappings\":[]},\"sources\":{\"data/source/raiden/Token.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity 0.7.6;\\n\\ninterface Token {\\n\\n    /// @return supply total amount of tokens\\n    function totalSupply() external view returns (uint256 supply);\\n\\n    /// @param _owner The address from which the balance will be retrieved\\n    /// @return balance The balance\\n    function balanceOf(address _owner) external view returns (uint256 balance);\\n\\n    /// @notice send `_value` token to `_to` from `msg.sender`\\n    /// @param _to The address of the recipient\\n    /// @param _value The amount of token to be transferred\\n    /// @return success Whether the transfer was successful or not\\n    function transfer(address _to, uint256 _value) external returns (bool success);\\n\\n    /// @notice send `_value` token to `_to` from `_from` on the condition it is approved by `_from`\\n    /// @param _from The address of the sender\\n    /// @param _to The address of the recipient\\n    /// @param _value The amount of token to be transferred\\n    /// @return success Whether the transfer was successful or not\\n    function transferFrom(address _from, address _to, uint256 _value) external returns (bool success);\\n\\n    /// @notice `msg.sender` approves `_spender` to spend `_value` tokens\\n    /// @param _spender The address of the account able to transfer the tokens\\n    /// @param _value The amount of wei to be approved for transfer\\n    /// @return success Whether the approval was successful or not\\n    function approve(address _spender, uint256 _value) external returns (bool success);\\n\\n    /// @param _owner The address of the account owning tokens\\n    /// @param _spender The address of the account able to transfer the tokens\\n    /// @return remaining Amount of remaining tokens allowed to spent\\n    function allowance(address _owner, address _spender) external view returns (uint256 remaining);\\n\\n    event Transfer(address indexed _from, address indexed _to, uint256 _value);\\n    event Approval(address indexed _owner, address indexed _spender, uint256 _value);\\n\\n    // Optionally implemented function to show the number of decimals for the token\\n    function decimals() external view returns (uint8 decimals);\\n}\\n\",\"keccak256\":\"0x5a8ccb9fa426228d9e213164f22a94b0ac57f1aa15ab76ce88a96177edd7b0b3\",\"license\":\"MIT\"},\"data/source/raiden/Utils.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity 0.7.6;\\n\\n/// @title Utils\\n/// @notice Utils contract for various helpers used by the Raiden Network smart\\n/// contracts.\\ncontract Utils {\\n    /// @notice Check if a contract exists\\n    /// @param contract_address The address to check whether a contract is\\n    /// deployed or not\\n    /// @return True if a contract exists, false otherwise\\n    function contractExists(address contract_address) public view returns (bool) {\\n        uint size;\\n\\n        assembly { // solium-disable-line security/no-inline-assembly\\n            size := extcodesize(contract_address)\\n        }\\n\\n        return size > 0;\\n    }\\n}\\n\",\"keccak256\":\"0x3fb4df9cdadd3711bffff81a451868c7a1ee8a2f3ff1a20a4343def15cb38e0f\",\"license\":\"MIT\"},\"data/source/services/UserDeposit.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity 0.7.6;\\n\\nimport \\\"../raiden/Token.sol\\\";\\nimport \\\"../raiden/Utils.sol\\\";\\n\\ncontract UserDeposit is Utils {\\n    uint constant public withdraw_delay = 100;  // time before withdraw is allowed in blocks\\n\\n    // Token to be used for the deposit\\n    Token public token;\\n\\n    // Trusted contracts (can execute `transfer`)\\n    address public msc_address;\\n    address public one_to_n_address;\\n\\n    // Total amount of tokens that have been deposited. This is monotonous and\\n    // doing a transfer or withdrawing tokens will not decrease total_deposit!\\n    mapping(address => uint256) public total_deposit;\\n    // Current user's balance, ignoring planned withdraws\\n    mapping(address => uint256) public balances;\\n    mapping(address => WithdrawPlan) public withdraw_plans;\\n\\n    // The sum of all balances\\n    uint256 public whole_balance = 0;\\n    // Deposit limit for this whole contract\\n    uint256 public whole_balance_limit;\\n\\n    /*\\n     *  Structs\\n     */\\n    struct WithdrawPlan {\\n        uint256 amount;\\n        uint256 withdraw_block;  // earliest block at which withdraw is allowed\\n    }\\n\\n    /*\\n     *  Events\\n     */\\n\\n    event BalanceReduced(address indexed owner, uint newBalance);\\n    event WithdrawPlanned(address indexed withdrawer, uint plannedBalance);\\n\\n    /*\\n     *  Modifiers\\n     */\\n\\n    modifier canTransfer() {\\n        require(msg.sender == msc_address || msg.sender == one_to_n_address, \\\"unknown caller\\\");\\n        _;\\n    }\\n\\n    /*\\n     *  Constructor\\n     */\\n\\n    /// @notice Set the default values for the smart contract\\n    /// @param _token_address The address of the token to use for rewards\\n    constructor(address _token_address, uint256 _whole_balance_limit)\\n    {\\n        // check token contract\\n        require(_token_address != address(0x0), \\\"token at address zero\\\");\\n        require(contractExists(_token_address), \\\"token has no code\\\");\\n        token = Token(_token_address);\\n        require(token.totalSupply() > 0, \\\"token has no total supply\\\"); // Check if the contract is indeed a token contract\\n        // check and set the whole balance limit\\n        require(_whole_balance_limit > 0, \\\"whole balance limit is zero\\\");\\n        whole_balance_limit = _whole_balance_limit;\\n    }\\n\\n    /// @notice Specify trusted contracts. This has to be done outside of the\\n    /// constructor to avoid cyclic dependencies.\\n    /// @param _msc_address Address of the MonitoringService contract\\n    /// @param _one_to_n_address Address of the OneToN contract\\n    function init(address _msc_address, address _one_to_n_address)\\n        external\\n    {\\n        // prevent changes of trusted contracts after initialization\\n        require(msc_address == address(0x0) && one_to_n_address == address(0x0), \\\"already initialized\\\");\\n\\n        // check monitoring service contract\\n        require(_msc_address != address(0x0), \\\"MS contract at address zero\\\");\\n        require(contractExists(_msc_address), \\\"MS contract has no code\\\");\\n        msc_address = _msc_address;\\n\\n        // check one to n contract\\n        require(_one_to_n_address != address(0x0), \\\"OneToN at address zero\\\");\\n        require(contractExists(_one_to_n_address), \\\"OneToN has no code\\\");\\n        one_to_n_address = _one_to_n_address;\\n    }\\n\\n    /// @notice Deposit tokens. The amount of transferred tokens will be\\n    /// `new_total_deposit - total_deposit[beneficiary]`. This makes the\\n    /// function behavior predictable and idempotent. Can be called several\\n    /// times and on behalf of other accounts.\\n    /// @param beneficiary The account benefiting from the deposit\\n    /// @param new_total_deposit The total sum of tokens that have been\\n    /// deposited by the user by calling this function.\\n    function deposit(address beneficiary, uint256 new_total_deposit)\\n        external\\n    {\\n        require(new_total_deposit > total_deposit[beneficiary], \\\"deposit not increasing\\\");\\n\\n        // Calculate the actual amount of tokens that will be transferred\\n        uint256 added_deposit = new_total_deposit - total_deposit[beneficiary];\\n\\n        balances[beneficiary] += added_deposit;\\n        total_deposit[beneficiary] += added_deposit;\\n\\n        // Update whole_balance, but take care against overflows.\\n        require(whole_balance + added_deposit >= whole_balance, \\\"overflowing deposit\\\");\\n        whole_balance += added_deposit;\\n\\n        // Decline deposit if the whole balance is bigger than the limit.\\n        require(whole_balance <= whole_balance_limit, \\\"too much deposit\\\");\\n\\n        // Actual transfer.\\n        require(token.transferFrom(msg.sender, address(this), added_deposit), \\\"tokens didn't transfer\\\");\\n    }\\n\\n    /// @notice Internally transfer deposits between two addresses.\\n    /// Sender and receiver must be different or the transaction will fail.\\n    /// @param sender Account from which the amount will be deducted\\n    /// @param receiver Account to which the amount will be credited\\n    /// @param amount Amount of tokens to be transferred\\n    /// @return success true if transfer has been done successfully, otherwise false\\n    function transfer(\\n        address sender,\\n        address receiver,\\n        uint256 amount\\n    )\\n        external\\n        canTransfer()\\n        returns (bool success)\\n    {\\n        require(sender != receiver, \\\"sender == receiver\\\");\\n        if (balances[sender] >= amount && amount > 0) {\\n            balances[sender] -= amount;\\n            balances[receiver] += amount;\\n            emit BalanceReduced(sender, balances[sender]);\\n            return true;\\n        } else {\\n            return false;\\n        }\\n    }\\n\\n    /// @notice Announce intention to withdraw tokens.\\n    /// Sets the planned withdraw amount and resets the withdraw_block.\\n    /// There is only one planned withdrawal at a time, the old one gets overwritten.\\n    /// @param amount Maximum amount of tokens to be withdrawn\\n    function planWithdraw(uint256 amount)\\n        external\\n    {\\n        require(amount > 0, \\\"withdrawing zero\\\");\\n        require(balances[msg.sender] >= amount, \\\"withdrawing too much\\\");\\n\\n        withdraw_plans[msg.sender] = WithdrawPlan({\\n            amount: amount,\\n            withdraw_block: block.number + withdraw_delay\\n        });\\n        emit WithdrawPlanned(msg.sender, balances[msg.sender] - amount);\\n    }\\n\\n    /// @notice Execute a planned withdrawal\\n    /// Will only work after the withdraw_delay has expired.\\n    /// An amount lower or equal to the planned amount may be withdrawn.\\n    /// Removes the withdraw plan even if not the full amount has been\\n    /// withdrawn.\\n    /// @param amount Amount of tokens to be withdrawn\\n    function withdraw(uint256 amount)\\n        external\\n    {\\n        WithdrawPlan storage withdraw_plan = withdraw_plans[msg.sender];\\n        require(amount <= withdraw_plan.amount, \\\"withdrawing more than planned\\\");\\n        require(withdraw_plan.withdraw_block <= block.number, \\\"withdrawing too early\\\");\\n        uint256 withdrawable = min(amount, balances[msg.sender]);\\n        balances[msg.sender] -= withdrawable;\\n\\n        // Update whole_balance, but take care against underflows.\\n        require(whole_balance - withdrawable <= whole_balance, \\\"underflow in whole_balance\\\");\\n        whole_balance -= withdrawable;\\n\\n        emit BalanceReduced(msg.sender, balances[msg.sender]);\\n        delete withdraw_plans[msg.sender];\\n\\n        require(token.transfer(msg.sender, withdrawable), \\\"tokens didn't transfer\\\");\\n    }\\n\\n    /// @notice The owner's balance with planned withdrawals deducted\\n    /// @param owner Address for which the balance should be returned\\n    /// @return remaining_balance The remaining balance after planned withdrawals\\n    function effectiveBalance(address owner)\\n        external\\n        view\\n        returns (uint256 remaining_balance)\\n    {\\n        WithdrawPlan storage withdraw_plan = withdraw_plans[owner];\\n        if (withdraw_plan.amount > balances[owner]) {\\n            return 0;\\n        }\\n        return balances[owner] - withdraw_plan.amount;\\n    }\\n\\n    function min(uint256 a, uint256 b) internal pure returns (uint256)\\n    {\\n        return a > b ? b : a;\\n    }\\n}\\n\\n\\n// MIT License\\n\\n// Copyright (c) 2018\\n\\n// Permission is hereby granted, free of charge, to any person obtaining a copy\\n// of this software and associated documentation files (the \\\"Software\\\"), to deal\\n// in the Software without restriction, including without limitation the rights\\n// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell\\n// copies of the Software, and to permit persons to whom the Software is\\n// furnished to do so, subject to the following conditions:\\n\\n// The above copyright notice and this permission notice shall be included in all\\n// copies or substantial portions of the Software.\\n\\n// THE SOFTWARE IS PROVIDED \\\"AS IS\\\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\\n// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\\n// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\\n// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\\n// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\\n// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\\n// SOFTWARE.\",\"keccak256\":\"0x070b4f1949eec8099a1bc6e8a91789ba64853074e79b6a272d0bd8cc8f0e3053\",\"license\":\"MIT\"}},\"version\":1}",
+  "bytecode": "0x608060405260006006620000126200031f565b50503480156200002c576000806200002962000383565b50505b5060405162001a6638038062001a66833981810160405260408110156200005d576000806200005a62000383565b50505b8101908080519291906020018051925050506001600160a01b038216620000d55760405162461bcd60e51b815260206004820152601560248201527f746f6b656e2061742061646472657373207a65726f0000000000000000000000604482015260640160405180910390620000d262000383565b50505b620000e08262000308565b620001305760405162461bcd60e51b8152602060048201526011602482015270746f6b656e20686173206e6f20636f646560781b6044820152606401604051809103906200012d62000383565b50505b81600060018162000140620003f0565b816001600160a01b0302191690836001600160a01b0316021790620001646200031f565b50505060008060009062000177620003f0565b906101000a90046001600160a01b03166001600160a01b03166318160ddd6040518163ffffffff1660e01b81526004016020604051808303818680620001bc6200043d565b158015620001d457600080620001d162000383565b50505b505a620001e06200048a565b505050505015801562000202573d6000803e3d6000620001ff62000383565b50505b505050506040513d602081101562000224576000806200022162000383565b50505b8101908080519390931192506200028f9150505760405162461bcd60e51b815260206004820152601960248201527f746f6b656e20686173206e6f20746f74616c20737570706c79000000000000006044820152606401604051809103906200028c62000383565b50505b60008111620002ef5760405162461bcd60e51b815260206004820152601b60248201527f77686f6c652062616c616e6365206c696d6974206973207a65726f0000000000604482015260640160405180910390620002ec62000383565b50505b80806007620002fd6200031f565b505050505062000582565b60008082620003166200043d565b15159392505050565b6322bd64c0598160e01b8152836004820152846024820152600081604483336000905af158600e01573d6000803e3d6000fd5b3d6001141558600a015760016000f35b60005b60408110156200037e5760008282015260200162000365565b505050565b632a2a7adb598160e01b8152600481016020815285602082015260005b86811015620003bd578086015182820160400152602001620003a0565b506020828760640184336000905af158600e01573d6000803e3d6000fd5b3d6001141558600a015760016000f35b505050565b6303daa959598160e01b8152836004820152602081602483336000905af158600e01573d6000803e3d6000fd5b3d6001141558600a015760016000f35b8051600082529350602062000365565b638435035b598160e01b8152836004820152602081602483336000905af158600e01573d6000803e3d6000fd5b3d6001141558600a015760016000f35b8051600082529350602062000365565b638540661f598160e01b8152620004c0565b8080831115620004a95750815b92915050565b8080831015620004a9575090919050565b836004820152846024820152606060448201528660648201526084810160005b88811015620004fa578088015182820152602001620004e0565b506060828960a40184336000905af158600e01573d6000803e3d6000fd5b3d6001141558600a015760016000f35b815160408301513d6000853e8b8b82606087013350600060045af15059620005518d3d620004af565b8c016200055f81876200049c565b5b8281101562000576576000815260200162000560565b50929c50505050505050565b6114d480620005926000396000f3fe6080604052348015610019576000806100166111dc565b50505b50600436106100d95760003560e01c8063145ccb0f146100e757806316a398f71461010f57806325fc2ccf1461015057806327e235e3146101585780632e1a7d4d146101875780633e90af50146101ad57806347e7ef24146101f45780637709bc78146102295780638fd066e01461026c578063b0a05a2e14610274578063beabacc814610298578063d54b10e3146102d7578063d635f2ee146102df578063d7a2729a1461030e578063f09a401614610316578063fc0c546a1461034d575b6000806100e46111dc565b50505b61010d60048036036020811015610106576000806101036111dc565b50505b5035610355565b005b61013e6004803603602081101561012e5760008061012b6111dc565b50505b50356001600160a01b0316610519565b60405190815260200160405180910390f35b61013e6105a1565b61013e60048036036020811015610177576000806101746111dc565b50505b50356001600160a01b03166105a6565b61010d600480360360208110156101a6576000806101a36111dc565b50505b50356105c1565b6101dc600480360360208110156101cc576000806101c96111dc565b50505b50356001600160a01b03166109c3565b60405191825260208201526040908101905180910390f35b61010d60048036036040811015610213576000806102106111dc565b50505b506001600160a01b0381351690602001356109ee565b61025860048036036020811015610248576000806102456111dc565b50505b50356001600160a01b0316610cb7565b604051901515815260200160405180910390f35b61013e610ccc565b61027c610cd6565b6040516001600160a01b03909116815260200160405180910390f35b610258600480360360608110156102b7576000806102b46111dc565b50505b506001600160a01b03813581169160208101359091169060400135610cf5565b61027c610f12565b61013e600480360360208110156102fe576000806102fb6111dc565b50505b50356001600160a01b0316610f1e565b61013e610f36565b61010d60048036036040811015610335576000806103326111dc565b50505b506001600160a01b0381358116916020013516610f40565b61027c6111b7565b600081116103a55760405162461bcd60e51b815260206004820152601060248201526f7769746864726177696e67207a65726f60801b6044820152606401604051809103906103a26111dc565b50505b80600460005a6103b3611247565b6001600160a01b03166001600160a01b031681526020019081526020016000206103db61129c565b101561042d5760405162461bcd60e51b81526020600482015260146024820152730eed2e8d0c8e4c2eed2dcce40e8dede40daeac6d60631b60448201526064016040518091039061042a6111dc565b50505b604051806040016040528082815260200160645a6104496112e8565b019052600560005a610459611247565b6001600160a01b03166001600160a01b0316815260200190815260200160002081518161048461132e565b505060208201518160010161049761132e565b505050505a6104a4611247565b6001600160a01b03167f1d6ecaf99b9d2150d4774c1ea17e3a04631acbfe71d58d2e9c7abbbc4561e03982600460005a6104dc611247565b6001600160a01b03166001600160a01b0316815260200190815260200160002061050461129c565b0360405190815260200160405180910390a250565b6001600160a01b0381166000908152600560205280604081206001600160a01b038416600090815260046020529091506040902061055561129c565b8161055e61129c565b111561056e57600091505061059c565b8061057761129c565b6001600160a01b038416600090815260046020526040902061059761129c565b039150505b919050565b606481565b600460205280600052604060002090506105be61129c565b81565b6000600560005a6105d0611247565b6001600160a01b03166001600160a01b031681526020019081526020016000209050806105fb61129c565b8211156106575760405162461bcd60e51b815260206004820152601d60248201527f7769746864726177696e67206d6f7265207468616e20706c616e6e65640000006044820152606401604051809103906106546111dc565b50505b5a6106606112e8565b8160010161066c61129c565b11156106bf5760405162461bcd60e51b81526020600482015260156024820152747769746864726177696e6720746f6f206561726c7960581b6044820152606401604051809103906106bc6111dc565b50505b60006106ff83600460005a6106d2611247565b6001600160a01b03166001600160a01b031681526020019081526020016000206106fa61129c565b6111c2565b905080600460005a61070f611247565b6001600160a01b03166001600160a01b031681526020019081526020016000206000828261073b61129c565b03925050819061074961132e565b505050600661075661129c565b81600661076161129c565b0311156107ba5760405162461bcd60e51b815260206004820152601a602482015279756e646572666c6f7720696e2077686f6c655f62616c616e636560301b6044820152606401604051809103906107b76111dc565b50505b806006600082826107c961129c565b0392505081906107d761132e565b5050505a6107e3611247565b6001600160a01b03166000805160206114b4833981519152600460005a610808611247565b6001600160a01b03166001600160a01b0316815260200190815260200160002061083061129c565b60405190815260200160405180910390a2600560005a61084e611247565b6001600160a01b03166001600160a01b031681526020019081526020016000206000808261087a61132e565b50506001820160009061088b61132e565b5050505060008061089a61129c565b906101000a90046001600160a01b03166001600160a01b031663a9059cbb5a6108c1611247565b836040516001600160e01b031960e085901b1681526001600160a01b03909216600483015260248201526044016020604051808303816000878061090361137c565b158015610918576000806109156111dc565b50505b505a6109226113c8565b505050505050158015610942573d6000803e3d600061093f6111dc565b50505b505050506040513d60208110156109615760008061095e6111dc565b50505b81019080805192506109be9150505760405162461bcd60e51b81526020600482015260166024820152753a37b5b2b739903234b23713ba103a3930b739b332b960511b6044820152606401604051809103906109bb6111dc565b50505b505050565b60056020528060005260406000209050806109dc61129c565b90806001016109e961129c565b905082565b6001600160a01b0382166000908152600360205260409020610a0e61129c565b8111610a625760405162461bcd60e51b81526020600482015260166024820152756465706f736974206e6f7420696e6372656173696e6760501b604482015260640160405180910390610a5f6111dc565b50505b6001600160a01b0382166000908152600360205260408120610a8261129c565b6001600160a01b03841660009081526004602052908303915081906040902060008282610aad61129c565b019250508190610abb61132e565b5050506001600160a01b0383166000908152600360205281906040902060008282610ae461129c565b019250508190610af261132e565b5050506006610aff61129c565b816006610b0a61129c565b011015610b5c5760405162461bcd60e51b81526020600482015260136024820152721bdd995c999b1bddda5b99c819195c1bdcda5d606a1b604482015260640160405180910390610b596111dc565b50505b80600660008282610b6b61129c565b019250508190610b7961132e565b5050506007610b8661129c565b6006610b9061129c565b1115610bde5760405162461bcd60e51b815260206004820152601060248201526f1d1bdbc81b5d58da0819195c1bdcda5d60821b604482015260640160405180910390610bdb6111dc565b50505b600080610be961129c565b906101000a90046001600160a01b03166001600160a01b03166323b872dd5a610c10611247565b5a63996d79a5598160e01b8152602081600483336000905af158600e01573d6000803e3d6000fd5b3d6001141558600a015760016000f35b8051925060005b6040811015610c6657600082820152602001610c4f565b505050846040516001600160e01b031960e086901b1681526001600160a01b03938416600482015291909216602482015260448101919091526064016020604051808303816000878061090361137c565b60008082610cc361137c565b15159392505050565b60066105be61129c565b60006002610ce261129c565b906101000a90046001600160a01b031681565b6000806001610d0261129c565b906101000a90046001600160a01b03166001600160a01b03165a610d24611247565b6001600160a01b03161480610d6d575060006002610d4061129c565b906101000a90046001600160a01b03166001600160a01b03165a610d62611247565b6001600160a01b0316145b610db75760405162461bcd60e51b815260206004820152600e60248201526d3ab735b737bbb71031b0b63632b960911b604482015260640160405180910390610db46111dc565b50505b826001600160a01b0316846001600160a01b03161415610e1b5760405162461bcd60e51b815260206004820152601260248201527139b2b73232b9101e9e903932b1b2b4bb32b960711b604482015260640160405180910390610e186111dc565b50505b6001600160a01b03841660009081526004602052829060409020610e3d61129c565b10158015610e4b5750600082115b15610f07576001600160a01b0384166000908152600460205282906040902060008282610e7661129c565b039250508190610e8461132e565b5050506001600160a01b0383166000908152600460205282906040902060008282610ead61129c565b019250508190610ebb61132e565b5050506001600160a01b038416600081815260046020526000805160206114b48339815191529060409020610eee61129c565b60405190815260200160405180910390a2506001610f0b565b5060005b9392505050565b60006001610ce261129c565b600360205280600052604060002090506105be61129c565b60076105be61129c565b6000806001610f4d61129c565b906101000a90046001600160a01b03166001600160a01b0316148015610f9657506000806002610f7b61129c565b906101000a90046001600160a01b03166001600160a01b0316145b610fe55760405162461bcd60e51b8152602060048201526013602482015272185b1c9958591e481a5b9a5d1a585b1a5e9959606a1b604482015260640160405180910390610fe26111dc565b50505b6001600160a01b0382166110465760405162461bcd60e51b815260206004820152601b60248201527a4d5320636f6e74726163742061742061646472657373207a65726f60281b6044820152606401604051809103906110436111dc565b50505b61104f82610cb7565b6110a25760405162461bcd60e51b81526020600482015260176024820152764d5320636f6e747261637420686173206e6f20636f646560481b60448201526064016040518091039061109f6111dc565b50505b81600180806110af61129c565b816001600160a01b0302191690836001600160a01b03160217906110d161132e565b5050506001600160a01b0381166111305760405162461bcd60e51b81526020600482015260166024820152754f6e65546f4e2061742061646472657373207a65726f60501b60448201526064016040518091039061112d6111dc565b50505b61113981610cb7565b6111875760405162461bcd60e51b81526020600482015260126024820152714f6e65546f4e20686173206e6f20636f646560701b6044820152606401604051809103906111846111dc565b50505b80600260018161119561129c565b816001600160a01b0302191690836001600160a01b03160217906109bb61132e565b600080610ce261129c565b60008183116111d157826111d3565b815b90505b92915050565b632a2a7adb598160e01b8152600481016020815285602082015260005b868110156112145780860151828201604001526020016111f9565b506020828760640184336000905af158600e01573d6000803e3d6000fd5b3d6001141558600a015760016000f35b505050565b6373509064598160e01b8152602081600483336000905af158600e01573d6000803e3d6000fd5b3d6001141558600a015760016000f35b8051935060005b60408110156109be57600082820152602001611285565b6303daa959598160e01b8152836004820152602081602483336000905af158600e01573d6000803e3d6000fd5b3d6001141558600a015760016000f35b80516000825293506020611285565b635a98c361598160e01b8152602081600483336000905af158600e01573d6000803e3d6000fd5b3d6001141558600a015760016000f35b80516000825293506020611285565b6322bd64c0598160e01b8152836004820152846024820152600081604483336000905af158600e01573d6000803e3d6000fd5b3d6001141558600a015760016000f35b600081526020611285565b638435035b598160e01b8152836004820152602081602483336000905af158600e01573d6000803e3d6000fd5b3d6001141558600a015760016000f35b80516000825293506020611285565b6385979f76598160e01b81526113f9565b80808311156111d6575090919050565b80808310156111d6575090919050565b836004820152846024820152606060448201528760648201526084810160005b89811015611431578089015182820152602001611419565b506060828a60a40184336000905af158600e01573d6000803e3d6000fd5b3d6001141558600a015760016000f35b815160408301513d6000853e8c8c82606087013350600060045af150596114868e3d6113e9565b8d0161149281876113d9565b5b828110156114a75760008152602001611493565b50929d5050505050505056fe2e9bf8d4a8402929da26de77a79494626b184ddae2e3e0c076d6dfa10cd2a1d9",
+  "deployedBytecode": "0x6080604052348015610019576000806100166111dc565b50505b50600436106100d95760003560e01c8063145ccb0f146100e757806316a398f71461010f57806325fc2ccf1461015057806327e235e3146101585780632e1a7d4d146101875780633e90af50146101ad57806347e7ef24146101f45780637709bc78146102295780638fd066e01461026c578063b0a05a2e14610274578063beabacc814610298578063d54b10e3146102d7578063d635f2ee146102df578063d7a2729a1461030e578063f09a401614610316578063fc0c546a1461034d575b6000806100e46111dc565b50505b61010d60048036036020811015610106576000806101036111dc565b50505b5035610355565b005b61013e6004803603602081101561012e5760008061012b6111dc565b50505b50356001600160a01b0316610519565b60405190815260200160405180910390f35b61013e6105a1565b61013e60048036036020811015610177576000806101746111dc565b50505b50356001600160a01b03166105a6565b61010d600480360360208110156101a6576000806101a36111dc565b50505b50356105c1565b6101dc600480360360208110156101cc576000806101c96111dc565b50505b50356001600160a01b03166109c3565b60405191825260208201526040908101905180910390f35b61010d60048036036040811015610213576000806102106111dc565b50505b506001600160a01b0381351690602001356109ee565b61025860048036036020811015610248576000806102456111dc565b50505b50356001600160a01b0316610cb7565b604051901515815260200160405180910390f35b61013e610ccc565b61027c610cd6565b6040516001600160a01b03909116815260200160405180910390f35b610258600480360360608110156102b7576000806102b46111dc565b50505b506001600160a01b03813581169160208101359091169060400135610cf5565b61027c610f12565b61013e600480360360208110156102fe576000806102fb6111dc565b50505b50356001600160a01b0316610f1e565b61013e610f36565b61010d60048036036040811015610335576000806103326111dc565b50505b506001600160a01b0381358116916020013516610f40565b61027c6111b7565b600081116103a55760405162461bcd60e51b815260206004820152601060248201526f7769746864726177696e67207a65726f60801b6044820152606401604051809103906103a26111dc565b50505b80600460005a6103b3611247565b6001600160a01b03166001600160a01b031681526020019081526020016000206103db61129c565b101561042d5760405162461bcd60e51b81526020600482015260146024820152730eed2e8d0c8e4c2eed2dcce40e8dede40daeac6d60631b60448201526064016040518091039061042a6111dc565b50505b604051806040016040528082815260200160645a6104496112e8565b019052600560005a610459611247565b6001600160a01b03166001600160a01b0316815260200190815260200160002081518161048461132e565b505060208201518160010161049761132e565b505050505a6104a4611247565b6001600160a01b03167f1d6ecaf99b9d2150d4774c1ea17e3a04631acbfe71d58d2e9c7abbbc4561e03982600460005a6104dc611247565b6001600160a01b03166001600160a01b0316815260200190815260200160002061050461129c565b0360405190815260200160405180910390a250565b6001600160a01b0381166000908152600560205280604081206001600160a01b038416600090815260046020529091506040902061055561129c565b8161055e61129c565b111561056e57600091505061059c565b8061057761129c565b6001600160a01b038416600090815260046020526040902061059761129c565b039150505b919050565b606481565b600460205280600052604060002090506105be61129c565b81565b6000600560005a6105d0611247565b6001600160a01b03166001600160a01b031681526020019081526020016000209050806105fb61129c565b8211156106575760405162461bcd60e51b815260206004820152601d60248201527f7769746864726177696e67206d6f7265207468616e20706c616e6e65640000006044820152606401604051809103906106546111dc565b50505b5a6106606112e8565b8160010161066c61129c565b11156106bf5760405162461bcd60e51b81526020600482015260156024820152747769746864726177696e6720746f6f206561726c7960581b6044820152606401604051809103906106bc6111dc565b50505b60006106ff83600460005a6106d2611247565b6001600160a01b03166001600160a01b031681526020019081526020016000206106fa61129c565b6111c2565b905080600460005a61070f611247565b6001600160a01b03166001600160a01b031681526020019081526020016000206000828261073b61129c565b03925050819061074961132e565b505050600661075661129c565b81600661076161129c565b0311156107ba5760405162461bcd60e51b815260206004820152601a602482015279756e646572666c6f7720696e2077686f6c655f62616c616e636560301b6044820152606401604051809103906107b76111dc565b50505b806006600082826107c961129c565b0392505081906107d761132e565b5050505a6107e3611247565b6001600160a01b03166000805160206114b4833981519152600460005a610808611247565b6001600160a01b03166001600160a01b0316815260200190815260200160002061083061129c565b60405190815260200160405180910390a2600560005a61084e611247565b6001600160a01b03166001600160a01b031681526020019081526020016000206000808261087a61132e565b50506001820160009061088b61132e565b5050505060008061089a61129c565b906101000a90046001600160a01b03166001600160a01b031663a9059cbb5a6108c1611247565b836040516001600160e01b031960e085901b1681526001600160a01b03909216600483015260248201526044016020604051808303816000878061090361137c565b158015610918576000806109156111dc565b50505b505a6109226113c8565b505050505050158015610942573d6000803e3d600061093f6111dc565b50505b505050506040513d60208110156109615760008061095e6111dc565b50505b81019080805192506109be9150505760405162461bcd60e51b81526020600482015260166024820152753a37b5b2b739903234b23713ba103a3930b739b332b960511b6044820152606401604051809103906109bb6111dc565b50505b505050565b60056020528060005260406000209050806109dc61129c565b90806001016109e961129c565b905082565b6001600160a01b0382166000908152600360205260409020610a0e61129c565b8111610a625760405162461bcd60e51b81526020600482015260166024820152756465706f736974206e6f7420696e6372656173696e6760501b604482015260640160405180910390610a5f6111dc565b50505b6001600160a01b0382166000908152600360205260408120610a8261129c565b6001600160a01b03841660009081526004602052908303915081906040902060008282610aad61129c565b019250508190610abb61132e565b5050506001600160a01b0383166000908152600360205281906040902060008282610ae461129c565b019250508190610af261132e565b5050506006610aff61129c565b816006610b0a61129c565b011015610b5c5760405162461bcd60e51b81526020600482015260136024820152721bdd995c999b1bddda5b99c819195c1bdcda5d606a1b604482015260640160405180910390610b596111dc565b50505b80600660008282610b6b61129c565b019250508190610b7961132e565b5050506007610b8661129c565b6006610b9061129c565b1115610bde5760405162461bcd60e51b815260206004820152601060248201526f1d1bdbc81b5d58da0819195c1bdcda5d60821b604482015260640160405180910390610bdb6111dc565b50505b600080610be961129c565b906101000a90046001600160a01b03166001600160a01b03166323b872dd5a610c10611247565b5a63996d79a5598160e01b8152602081600483336000905af158600e01573d6000803e3d6000fd5b3d6001141558600a015760016000f35b8051925060005b6040811015610c6657600082820152602001610c4f565b505050846040516001600160e01b031960e086901b1681526001600160a01b03938416600482015291909216602482015260448101919091526064016020604051808303816000878061090361137c565b60008082610cc361137c565b15159392505050565b60066105be61129c565b60006002610ce261129c565b906101000a90046001600160a01b031681565b6000806001610d0261129c565b906101000a90046001600160a01b03166001600160a01b03165a610d24611247565b6001600160a01b03161480610d6d575060006002610d4061129c565b906101000a90046001600160a01b03166001600160a01b03165a610d62611247565b6001600160a01b0316145b610db75760405162461bcd60e51b815260206004820152600e60248201526d3ab735b737bbb71031b0b63632b960911b604482015260640160405180910390610db46111dc565b50505b826001600160a01b0316846001600160a01b03161415610e1b5760405162461bcd60e51b815260206004820152601260248201527139b2b73232b9101e9e903932b1b2b4bb32b960711b604482015260640160405180910390610e186111dc565b50505b6001600160a01b03841660009081526004602052829060409020610e3d61129c565b10158015610e4b5750600082115b15610f07576001600160a01b0384166000908152600460205282906040902060008282610e7661129c565b039250508190610e8461132e565b5050506001600160a01b0383166000908152600460205282906040902060008282610ead61129c565b019250508190610ebb61132e565b5050506001600160a01b038416600081815260046020526000805160206114b48339815191529060409020610eee61129c565b60405190815260200160405180910390a2506001610f0b565b5060005b9392505050565b60006001610ce261129c565b600360205280600052604060002090506105be61129c565b60076105be61129c565b6000806001610f4d61129c565b906101000a90046001600160a01b03166001600160a01b0316148015610f9657506000806002610f7b61129c565b906101000a90046001600160a01b03166001600160a01b0316145b610fe55760405162461bcd60e51b8152602060048201526013602482015272185b1c9958591e481a5b9a5d1a585b1a5e9959606a1b604482015260640160405180910390610fe26111dc565b50505b6001600160a01b0382166110465760405162461bcd60e51b815260206004820152601b60248201527a4d5320636f6e74726163742061742061646472657373207a65726f60281b6044820152606401604051809103906110436111dc565b50505b61104f82610cb7565b6110a25760405162461bcd60e51b81526020600482015260176024820152764d5320636f6e747261637420686173206e6f20636f646560481b60448201526064016040518091039061109f6111dc565b50505b81600180806110af61129c565b816001600160a01b0302191690836001600160a01b03160217906110d161132e565b5050506001600160a01b0381166111305760405162461bcd60e51b81526020600482015260166024820152754f6e65546f4e2061742061646472657373207a65726f60501b60448201526064016040518091039061112d6111dc565b50505b61113981610cb7565b6111875760405162461bcd60e51b81526020600482015260126024820152714f6e65546f4e20686173206e6f20636f646560701b6044820152606401604051809103906111846111dc565b50505b80600260018161119561129c565b816001600160a01b0302191690836001600160a01b03160217906109bb61132e565b600080610ce261129c565b60008183116111d157826111d3565b815b90505b92915050565b632a2a7adb598160e01b8152600481016020815285602082015260005b868110156112145780860151828201604001526020016111f9565b506020828760640184336000905af158600e01573d6000803e3d6000fd5b3d6001141558600a015760016000f35b505050565b6373509064598160e01b8152602081600483336000905af158600e01573d6000803e3d6000fd5b3d6001141558600a015760016000f35b8051935060005b60408110156109be57600082820152602001611285565b6303daa959598160e01b8152836004820152602081602483336000905af158600e01573d6000803e3d6000fd5b3d6001141558600a015760016000f35b80516000825293506020611285565b635a98c361598160e01b8152602081600483336000905af158600e01573d6000803e3d6000fd5b3d6001141558600a015760016000f35b80516000825293506020611285565b6322bd64c0598160e01b8152836004820152846024820152600081604483336000905af158600e01573d6000803e3d6000fd5b3d6001141558600a015760016000f35b600081526020611285565b638435035b598160e01b8152836004820152602081602483336000905af158600e01573d6000803e3d6000fd5b3d6001141558600a015760016000f35b80516000825293506020611285565b6385979f76598160e01b81526113f9565b80808311156111d6575090919050565b80808310156111d6575090919050565b836004820152846024820152606060448201528760648201526084810160005b89811015611431578089015182820152602001611419565b506060828a60a40184336000905af158600e01573d6000803e3d6000fd5b3d6001141558600a015760016000f35b815160408301513d6000853e8c8c82606087013350600060045af150596114868e3d6113e9565b8d0161149281876113d9565b5b828110156114a75760008152602001611493565b50929d5050505050505056fe2e9bf8d4a8402929da26de77a79494626b184ddae2e3e0c076d6dfa10cd2a1d9",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {
+      "constructor": {
+        "params": {
+          "_token_address": "The address of the token to use for rewards"
+        }
+      },
+      "contractExists(address)": {
+        "params": {
+          "contract_address": "The address to check whether a contract is deployed or not"
+        },
+        "returns": {
+          "_0": "True if a contract exists, false otherwise"
+        }
+      },
+      "deposit(address,uint256)": {
+        "params": {
+          "beneficiary": "The account benefiting from the deposit",
+          "new_total_deposit": "The total sum of tokens that have been deposited by the user by calling this function."
+        }
+      },
+      "effectiveBalance(address)": {
+        "params": {
+          "owner": "Address for which the balance should be returned"
+        },
+        "returns": {
+          "remaining_balance": "The remaining balance after planned withdrawals"
+        }
+      },
+      "init(address,address)": {
+        "params": {
+          "_msc_address": "Address of the MonitoringService contract",
+          "_one_to_n_address": "Address of the OneToN contract"
+        }
+      },
+      "planWithdraw(uint256)": {
+        "params": {
+          "amount": "Maximum amount of tokens to be withdrawn"
+        }
+      },
+      "transfer(address,address,uint256)": {
+        "params": {
+          "amount": "Amount of tokens to be transferred",
+          "receiver": "Account to which the amount will be credited",
+          "sender": "Account from which the amount will be deducted"
+        },
+        "returns": {
+          "success": "true if transfer has been done successfully, otherwise false"
+        }
+      },
+      "withdraw(uint256)": {
+        "params": {
+          "amount": "Amount of tokens to be withdrawn"
+        }
+      }
+    },
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {
+      "constructor": {
+        "notice": "Set the default values for the smart contract"
+      },
+      "contractExists(address)": {
+        "notice": "Check if a contract exists"
+      },
+      "deposit(address,uint256)": {
+        "notice": "Deposit tokens. The amount of transferred tokens will be `new_total_deposit - total_deposit[beneficiary]`. This makes the function behavior predictable and idempotent. Can be called several times and on behalf of other accounts."
+      },
+      "effectiveBalance(address)": {
+        "notice": "The owner's balance with planned withdrawals deducted"
+      },
+      "init(address,address)": {
+        "notice": "Specify trusted contracts. This has to be done outside of the constructor to avoid cyclic dependencies."
+      },
+      "planWithdraw(uint256)": {
+        "notice": "Announce intention to withdraw tokens. Sets the planned withdraw amount and resets the withdraw_block. There is only one planned withdrawal at a time, the old one gets overwritten."
+      },
+      "transfer(address,address,uint256)": {
+        "notice": "Internally transfer deposits between two addresses. Sender and receiver must be different or the transaction will fail."
+      },
+      "withdraw(uint256)": {
+        "notice": "Execute a planned withdrawal Will only work after the withdraw_delay has expired. An amount lower or equal to the planned amount may be withdrawn. Removes the withdraw plan even if not the full amount has been withdrawn."
+      }
+    },
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [
+      {
+        "astId": 4979,
+        "contract": "data/source/services/UserDeposit.sol:UserDeposit",
+        "label": "token",
+        "offset": 0,
+        "slot": "0",
+        "type": "t_contract(Token)624"
+      },
+      {
+        "astId": 4981,
+        "contract": "data/source/services/UserDeposit.sol:UserDeposit",
+        "label": "msc_address",
+        "offset": 0,
+        "slot": "1",
+        "type": "t_address"
+      },
+      {
+        "astId": 4983,
+        "contract": "data/source/services/UserDeposit.sol:UserDeposit",
+        "label": "one_to_n_address",
+        "offset": 0,
+        "slot": "2",
+        "type": "t_address"
+      },
+      {
+        "astId": 4987,
+        "contract": "data/source/services/UserDeposit.sol:UserDeposit",
+        "label": "total_deposit",
+        "offset": 0,
+        "slot": "3",
+        "type": "t_mapping(t_address,t_uint256)"
+      },
+      {
+        "astId": 4991,
+        "contract": "data/source/services/UserDeposit.sol:UserDeposit",
+        "label": "balances",
+        "offset": 0,
+        "slot": "4",
+        "type": "t_mapping(t_address,t_uint256)"
+      },
+      {
+        "astId": 4995,
+        "contract": "data/source/services/UserDeposit.sol:UserDeposit",
+        "label": "withdraw_plans",
+        "offset": 0,
+        "slot": "5",
+        "type": "t_mapping(t_address,t_struct(WithdrawPlan)5005_storage)"
+      },
+      {
+        "astId": 4998,
+        "contract": "data/source/services/UserDeposit.sol:UserDeposit",
+        "label": "whole_balance",
+        "offset": 0,
+        "slot": "6",
+        "type": "t_uint256"
+      },
+      {
+        "astId": 5000,
+        "contract": "data/source/services/UserDeposit.sol:UserDeposit",
+        "label": "whole_balance_limit",
+        "offset": 0,
+        "slot": "7",
+        "type": "t_uint256"
+      }
+    ],
+    "types": {
+      "t_address": {
+        "encoding": "inplace",
+        "label": "address",
+        "numberOfBytes": "20"
+      },
+      "t_contract(Token)624": {
+        "encoding": "inplace",
+        "label": "contract Token",
+        "numberOfBytes": "20"
+      },
+      "t_mapping(t_address,t_struct(WithdrawPlan)5005_storage)": {
+        "encoding": "mapping",
+        "key": "t_address",
+        "label": "mapping(address => struct UserDeposit.WithdrawPlan)",
+        "numberOfBytes": "32",
+        "value": "t_struct(WithdrawPlan)5005_storage"
+      },
+      "t_mapping(t_address,t_uint256)": {
+        "encoding": "mapping",
+        "key": "t_address",
+        "label": "mapping(address => uint256)",
+        "numberOfBytes": "32",
+        "value": "t_uint256"
+      },
+      "t_struct(WithdrawPlan)5005_storage": {
+        "encoding": "inplace",
+        "label": "struct UserDeposit.WithdrawPlan",
+        "members": [
+          {
+            "astId": 5002,
+            "contract": "data/source/services/UserDeposit.sol:UserDeposit",
+            "label": "amount",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint256"
+          },
+          {
+            "astId": 5004,
+            "contract": "data/source/services/UserDeposit.sol:UserDeposit",
+            "label": "withdraw_block",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_uint256"
+          }
+        ],
+        "numberOfBytes": "64"
+      },
+      "t_uint256": {
+        "encoding": "inplace",
+        "label": "uint256",
+        "numberOfBytes": "32"
+      }
+    }
+  }
+}

@@ -1,0 +1,54 @@
+{
+    "contracts_version": "optimism",
+    "chain_id": 69,
+    "contracts": {
+        "SecretRegistry": {
+            "address": "0x3DF0C6eBb360E6485FcFfFa99Deab39Ed789Baf5",
+            "transactionHash": "0x85aaa13cac91276d2a7d7341b93690d87aab7739a6d235626345b544058be96c",
+            "blockNumber": 115430,
+            "gas_cost": 1074150,
+            "constructor_arguments": []
+        },
+        "TokenNetworkRegistry": {
+            "address": "0xEBD114D78aCe713DBA75e649eb763Eb9A4DeddaA",
+            "transactionHash": "0xf90926887b3206d35121ef44ba6c006468d5d8f6c8a4393a2549d2481de77b36",
+            "blockNumber": 115431,
+            "gas_cost": 6955938,
+            "constructor_arguments": [
+                "0x3DF0C6eBb360E6485FcFfFa99Deab39Ed789Baf5",
+                69,
+                20,
+                555428,
+                115792089237316195423570985008687907853269984665640564039457584007913129639935
+              ]
+        }
+    },
+    "token_networks": [
+        {
+            "token_network_address": "0xa5D521b23d6765d6c7d329813c36DE05a6FF8A0d",
+            "constructor_arguments": {
+                "_token_address": "0xc6f7F48C1FF8389691464f3fe3AFbc9a8a0BbABC",
+                "_secret_registry": "0x3DF0C6eBb360E6485FcFfFa99Deab39Ed789Baf5",
+                "_chain_id": 69,
+                "_settlement_timeout_min": 20,
+                "_settlement_timeout_max": 555428,
+                "_deprecation_executor": "0xFb8C3ba8A46014400487f2fB4d539A5Ff7bC367D",
+                "_channel_participant_deposit_limit": 115792089237316195423570985008687907853269984665640564039457584007913129639935,
+                "_token_network_deposit_limit": 115792089237316195423570985008687907853269984665640564039457584007913129639935
+            }
+        },
+        {
+            "token_network_address": "0x887dCf20d298898989529fd1773886489DE63333",
+            "constructor_arguments": {
+                "_token_address": "0x3c45e74eB3cd97959538789Ad0e821938eF50CE9",
+                "_secret_registry": "0x3DF0C6eBb360E6485FcFfFa99Deab39Ed789Baf5",
+                "_chain_id": 69,
+                "_settlement_timeout_min": 20,
+                "_settlement_timeout_max": 555428,
+                "_deprecation_executor": "0xFb8C3ba8A46014400487f2fB4d539A5Ff7bC367D",
+                "_channel_participant_deposit_limit": 115792089237316195423570985008687907853269984665640564039457584007913129639935,
+                "_token_network_deposit_limit": 115792089237316195423570985008687907853269984665640564039457584007913129639935
+            }
+        }
+    ]
+}

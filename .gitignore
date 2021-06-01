@@ -41,3 +41,7 @@ credentials/
 
 tags
 .mypy_cache/
+
+#JS stuff
+/raiden_contracts/data_optimism/hardhat/yarn.lock
+/raiden_contracts/data_optimism/hardhat/node_modules

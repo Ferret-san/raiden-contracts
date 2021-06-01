@@ -1,0 +1,634 @@
+{
+  "_format": "hh-sol-cache-2",
+  "files": {
+    "/d/Projects/Optimistic-Channels/raiden_contracts/data/source/lib/ECVerify.sol": {
+      "lastModificationDate": 1620587915400,
+      "contentHash": "47540069d5db0f639a38bcfed0d87a26",
+      "sourceName": "data/source/lib/ECVerify.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.7.6"
+      ],
+      "artifacts": [
+        "ECVerify"
+      ]
+    },
+    "/d/Projects/Optimistic-Channels/raiden_contracts/data/source/services/OneToN.sol": {
+      "lastModificationDate": 1620587915703,
+      "contentHash": "35262d803a6b5c769c9be5de1bf6fccb",
+      "sourceName": "data/source/services/OneToN.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "../lib/ECVerify.sol",
+        "../lib/MessageType.sol",
+        "../raiden/Utils.sol",
+        "./ServiceRegistry.sol",
+        "./UserDeposit.sol"
+      ],
+      "versionPragmas": [
+        "0.7.6"
+      ],
+      "artifacts": [
+        "OneToN"
+      ]
+    },
+    "/d/Projects/Optimistic-Channels/raiden_contracts/data/source/lib/MessageType.sol": {
+      "lastModificationDate": 1620587915426,
+      "contentHash": "83e506a0e1de226d5a4e40db33590992",
+      "sourceName": "data/source/lib/MessageType.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.7.6"
+      ],
+      "artifacts": [
+        "MessageType"
+      ]
+    },
+    "/d/Projects/Optimistic-Channels/raiden_contracts/data/source/raiden/Utils.sol": {
+      "lastModificationDate": 1620587915648,
+      "contentHash": "83127d1aa39df22aca5ee3e49c48768c",
+      "sourceName": "data/source/raiden/Utils.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.7.6"
+      ],
+      "artifacts": [
+        "Utils"
+      ]
+    },
+    "/d/Projects/Optimistic-Channels/raiden_contracts/data/source/services/ServiceRegistry.sol": {
+      "lastModificationDate": 1620587915738,
+      "contentHash": "7f15f29134af6cb3dc809feb94a2f6fc",
+      "sourceName": "data/source/services/ServiceRegistry.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "../raiden/Token.sol",
+        "../raiden/Utils.sol"
+      ],
+      "versionPragmas": [
+        "0.7.6"
+      ],
+      "artifacts": [
+        "Deposit",
+        "ServiceRegistry",
+        "ServiceRegistryConfigurableParameters"
+      ]
+    },
+    "/d/Projects/Optimistic-Channels/raiden_contracts/data/source/services/UserDeposit.sol": {
+      "lastModificationDate": 1620587915765,
+      "contentHash": "32b23dd304a2a90df6be4b8efb5294ab",
+      "sourceName": "data/source/services/UserDeposit.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "../raiden/Token.sol",
+        "../raiden/Utils.sol"
+      ],
+      "versionPragmas": [
+        "0.7.6"
+      ],
+      "artifacts": [
+        "UserDeposit"
+      ]
+    },
+    "/d/Projects/Optimistic-Channels/raiden_contracts/data/source/raiden/Token.sol": {
+      "lastModificationDate": 1620587915529,
+      "contentHash": "f3c9a7fa68aa7ebccebd635185122725",
+      "sourceName": "data/source/raiden/Token.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.7.6"
+      ],
+      "artifacts": [
+        "Token"
+      ]
+    },
+    "/d/Projects/Optimistic-Channels/raiden_contracts/data/source/test/StandardToken.sol": {
+      "lastModificationDate": 1620587915837,
+      "contentHash": "4750f0045b5adb30b410fa307c3a828b",
+      "sourceName": "data/source/test/StandardToken.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "../raiden/Token.sol"
+      ],
+      "versionPragmas": [
+        "0.7.6"
+      ],
+      "artifacts": [
+        "StandardToken"
+      ]
+    },
+    "/d/Projects/Optimistic-Channels/raiden_contracts/data/source/test/CustomToken.sol": {
+      "lastModificationDate": 1620587915792,
+      "contentHash": "ba9a460189ee5e6987a1325bab4fbd7d",
+      "sourceName": "data/source/test/CustomToken.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "./StandardToken.sol"
+      ],
+      "versionPragmas": [
+        "0.7.6"
+      ],
+      "artifacts": [
+        "CustomToken"
+      ]
+    },
+    "/d/Projects/Optimistic-Channels/raiden_contracts/data/source/services/MonitoringService.sol": {
+      "lastModificationDate": 1620587915674,
+      "contentHash": "d0e1e4aa72985d431140361b468c2def",
+      "sourceName": "data/source/services/MonitoringService.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "../lib/ECVerify.sol",
+        "../lib/MessageType.sol",
+        "../raiden/Token.sol",
+        "../raiden/Utils.sol",
+        "../raiden/TokenNetwork.sol",
+        "../raiden/TokenNetworkRegistry.sol",
+        "./ServiceRegistry.sol",
+        "./UserDeposit.sol"
+      ],
+      "versionPragmas": [
+        "0.7.6"
+      ],
+      "artifacts": [
+        "MonitoringService"
+      ]
+    },
+    "/d/Projects/Optimistic-Channels/raiden_contracts/data/source/raiden/TokenNetwork.sol": {
+      "lastModificationDate": 1620587915576,
+      "contentHash": "b15c3f2156497f64479501d230e1b4a1",
+      "sourceName": "data/source/raiden/TokenNetwork.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "../lib/ECVerify.sol",
+        "../lib/MessageType.sol",
+        "../lib/TokenNetworkUtils.sol",
+        "./Token.sol",
+        "./Utils.sol",
+        "./SecretRegistry.sol"
+      ],
+      "versionPragmas": [
+        "0.7.6"
+      ],
+      "artifacts": [
+        "TokenNetwork"
+      ]
+    },
+    "/d/Projects/Optimistic-Channels/raiden_contracts/data/source/raiden/TokenNetworkRegistry.sol": {
+      "lastModificationDate": 1620819375590,
+      "contentHash": "fa0d1a226c533b157796e1b5155d1309",
+      "sourceName": "data/source/raiden/TokenNetworkRegistry.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "./Utils.sol",
+        "./Token.sol",
+        "./TokenNetwork.sol"
+      ],
+      "versionPragmas": [
+        "0.7.6"
+      ],
+      "artifacts": [
+        "TokenNetworkRegistry"
+      ]
+    },
+    "/d/Projects/Optimistic-Channels/raiden_contracts/data/source/lib/TokenNetworkUtils.sol": {
+      "lastModificationDate": 1620587915461,
+      "contentHash": "aef6af56c2e2b428fac15d45d268fe9b",
+      "sourceName": "data/source/lib/TokenNetworkUtils.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "./ECVerify.sol",
+        "./MessageType.sol"
+      ],
+      "versionPragmas": [
+        "0.7.6"
+      ],
+      "artifacts": [
+        "TokenNetworkUtils"
+      ]
+    },
+    "/d/Projects/Optimistic-Channels/raiden_contracts/data/source/raiden/SecretRegistry.sol": {
+      "lastModificationDate": 1620587915496,
+      "contentHash": "a1e5c34604f09dac8cc2988d54484884",
+      "sourceName": "data/source/raiden/SecretRegistry.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.7.6"
+      ],
+      "artifacts": [
+        "SecretRegistry"
+      ]
+    }
+  }
+}
