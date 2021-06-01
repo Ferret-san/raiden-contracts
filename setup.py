@@ -11,7 +11,7 @@ from setuptools import Command
 from setuptools.command.build_py import build_py
 
 DESCRIPTION = "Raiden contracts library and utilities"
-VERSION = "0.37.5"
+VERSION = "0.37.6"
 
 
 def read_requirements(path: str) -> List[str]:
@@ -88,7 +88,7 @@ config = {
     "license": "MIT",
     "keywords": "raiden ethereum blockchain",
     "install_requires": requirements,
-    "setup_requires": _get_single_requirement(requirements, "py-solc"),
+    "setup_requires": requirements,
     "packages": find_packages(),
     "include_package_data": True,
     "classifiers": [
@@ -99,6 +99,7 @@ config = {
         "Programming Language :: Python :: 3",
         "Programming Language :: Python :: 3.7",
         "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: 3.9",
     ],
     "entry_points": {"console_scripts": ["deploy = raiden_contracts.deploy.__main__:main"]},
     "cmdclass": {

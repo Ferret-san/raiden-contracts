@@ -12,7 +12,7 @@ Raiden Network Smart Contracts
 Prerequisites
 -------------
 
--  Python 3.7 or 3.8
+-  Python 3.7, 3.8 or 3.9
 -  https://pip.pypa.io/en/stable/
 
 Installation
@@ -137,7 +137,6 @@ Compile the contracts
 ^^^^^^^^^^^^^^^^^^^^^
 
 Needed if you have made changes to the source code.
-Make sure you have `solc` installed: https://solidity.readthedocs.io/en/latest/installing-solidity.html
 
 ::
 

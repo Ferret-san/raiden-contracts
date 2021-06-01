@@ -318,6 +318,21 @@ def test_deploy_script_raiden(
         )
 
 
+@pytest.mark.slow
+def test_deploy_script_raiden_0_37_0(
+    deployer_0_37_0: ContractDeployer,
+) -> None:
+    """Checks that `verify_deployment_data` works fine with older contracts."""
+    data = deployer_0_37_0.deploy_raiden_contracts(
+        max_num_of_token_networks=1,
+        reuse_secret_registry_from_deploy_file=None,
+        settle_timeout_min=DEPLOY_SETTLE_TIMEOUT_MIN,
+        settle_timeout_max=DEPLOY_SETTLE_TIMEOUT_MAX,
+    )
+
+    deployer_0_37_0.verify_deployment_data(deployment_data=data)
+
+
 def test_deploy_raiden_reuse_secret_registry(
     deployer: ContractDeployer, deployed_raiden_info: DeployedContracts
 ) -> None:
@@ -841,6 +856,7 @@ def test_deploy_token_invalid_privkey() -> None:
         result = runner.invoke(token, deploy_token_arguments(privkey="wrong_priv_key"))
         assert result.exit_code != 0
         assert type(result.exception) == RuntimeError
+        assert result.exception
         assert result.exception.args == ("Could not access the private key.",)
         mock_deployer.assert_not_called()
 
@@ -855,6 +871,7 @@ def test_deploy_token_no_balance(privkey_file: IO) -> None:
             result = runner.invoke(token, deploy_token_arguments(privkey=privkey_file.name))
             assert result.exit_code != 0
             assert type(result.exception) == RuntimeError
+            assert result.exception
             assert result.exception.args == ("Account with insufficient funds.",)
             mock_deployer.assert_not_called()
 
@@ -992,6 +1009,7 @@ def test_register_script_without_token_network(mock_deploy: MagicMock, privkey_f
         )
         assert result.exit_code != 0
         assert type(result.exception) == RuntimeError
+        assert result.exception
         assert result.exception.args == (
             "No TokenNetworkRegistry was specified. "
             "Add --token-network-registry-address <address>.",
