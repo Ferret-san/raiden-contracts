@@ -1,0 +1,55 @@
+{
+    "contracts_version": "optimism",
+    "chain_id": 69,
+    "contracts": {
+        "ServiceRegistry": {
+            "address": "0x9b4d7E59f6cA64f37864845966E106cfbe6Eaa10",
+            "transactionHash": "0x2eaa35bc6d9dcd4f954d2d4d3d7c1df16fdd1a50f1a55d9012f839741249ad81",
+            "blockNumber": 115433,
+            "gas_cost": 4346311,
+            "constructor_arguments": [
+                "0x806E55Dc852609176F187a5C515393C923179d0C",
+                "0xFb8C3ba8A46014400487f2fB4d539A5Ff7bC367D",
+                2000000000000000000000,
+                6,
+                5,
+                17280000,
+                1000,
+                15552000
+              ]
+          },
+        "UserDeposit": {
+        "address": "0xc3Fbcb0aADdFE6399e04fCADa42F92C9104Cb133",
+        "transactionHash": "0xc4198cc8de405aa6b8d8397d1f54377a9ddbea47cfe8142b4f9c5dc3794cd926",
+        "blockNumber": 115434,
+        "gas_cost": 2629846,
+        "constructor_arguments": [
+            "0x806E55Dc852609176F187a5C515393C923179d0C",
+            115792089237316195423570985008687907853269984665640564039457584007913129639935
+        ]
+        },
+          "MonitoringService": {
+            "address": "0xE37d878e97ec516225dC151f4A056e23460e177D",
+            "transactionHash": "0xf89f317d4e1203a609b7049d2f6f93de2127315e6e047953b05c959748a37eda",
+            "blockNumber": 115435,
+            "gas_cost": 3519425,
+            "constructor_arguments": [
+                "0x806E55Dc852609176F187a5C515393C923179d0C",
+                "0x9b4d7E59f6cA64f37864845966E106cfbe6Eaa10",
+                "0xc3Fbcb0aADdFE6399e04fCADa42F92C9104Cb133",
+                "0xEBD114D78aCe713DBA75e649eb763Eb9A4DeddaA"
+            ]
+          },
+          "OneToN": {
+            "address": "0x3CD189b2FC57BA8456C8060a2B2dDb054B0F4baF",
+            "transactionHash": "0xac484db21957067edbfd10140a0df9c548ab509118b45f05051a15b550926c1e",
+            "block_number": 115436,
+            "gas_cost": 2261543,
+            "constructor_arguments": [
+                "0xc3Fbcb0aADdFE6399e04fCADa42F92C9104Cb133",
+                69,
+                "0x9b4d7E59f6cA64f37864845966E106cfbe6Eaa10"
+            ]
+          }
+    }
+}
