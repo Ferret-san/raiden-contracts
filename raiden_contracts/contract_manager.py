@@ -251,7 +251,7 @@ def get_contracts_deployment_info(
                 development_environment=development_environment,
             )
         )
-    print("Files path: ", path)
+    print("Files: ", files)
     deployment_data: Optional[DeployedContracts] = {}
 
     for f in files:
