@@ -3,6 +3,7 @@ import enum
 import json
 from copy import deepcopy
 from json import JSONDecodeError
+from os import path
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 
@@ -214,6 +215,9 @@ def get_contracts_deployment_info(
         module The name of the module. ALL means deployed contracts from all modules that are
         available for the version.
     """
+    #Adding the following print statements for debugging purposes
+    print(chain_id)
+    print(version)
     if not isinstance(module, DeploymentModule):
         raise ValueError(f"Unknown module {module} given to get_contracts_deployment_info()")
 
@@ -247,6 +251,7 @@ def get_contracts_deployment_info(
                 development_environment=development_environment,
             )
         )
+    print("Files path: ", path)
     deployment_data: Optional[DeployedContracts] = {}
 
     for f in files:
