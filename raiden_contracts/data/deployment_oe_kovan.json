@@ -1,5 +1,5 @@
 {
-    "contracts_version": "optimism",
+    "contracts_version": null,
     "chain_id": 69,
     "contracts": {
         "SecretRegistry": {
