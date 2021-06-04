@@ -256,9 +256,11 @@ def get_contracts_deployment_info(
 
     for f in files:
         j = load_json_from_path(f)
+        print("File: ", f)
+        print("Json: ", j)
         if j is None:
             continue
-        assert deployment_data is not None
+        assert deployment_data is not None, "deployment data is None"
         deployment_data = merge_deployment_data(
             deployment_data,
             DeployedContracts(
