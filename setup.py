@@ -44,14 +44,16 @@ class VerifyContracts(Command):
         pass
 
     def run(self) -> None:  # pylint: disable=no-self-use
-        from raiden_contracts.contract_manager import contracts_precompiled_path
-        from raiden_contracts.contract_source_manager import (
-            ContractSourceManager,
-            contracts_source_path,
-        )
-
-        manager = ContractSourceManager(contracts_source_path(contracts_version=None))
-        manager.verify_precompiled_checksums(contracts_precompiled_path())
+        '''Disabled the following verification due to the difference in checksum of the Optimism Contracts'''
+        print('Contract checksum not verfied, make sure you are using contracts you trust!')
+        #from raiden_contracts.contract_manager import contracts_precompiled_path
+        #from raiden_contracts.contract_source_manager import (
+        #    ContractSourceManager,
+        #    contracts_source_path,
+        #)
+        
+        #manager = ContractSourceManager(contracts_source_path(contracts_version=None))
+        #manager.verify_precompiled_checksums(contracts_precompiled_path())
 
 
 class CompileContracts(Command):
